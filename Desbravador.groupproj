@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F06CF967-E94D-42CB-8128-3402992B2013}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="client\Desbravador_Client.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="server\api_desbravador.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Desbravador_Client">
+        <MSBuild Projects="client\Desbravador_Client.dproj"/>
+    </Target>
+    <Target Name="Desbravador_Client:Clean">
+        <MSBuild Projects="client\Desbravador_Client.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Desbravador_Client:Make">
+        <MSBuild Projects="client\Desbravador_Client.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="api_desbravador">
+        <MSBuild Projects="server\api_desbravador.dproj"/>
+    </Target>
+    <Target Name="api_desbravador:Clean">
+        <MSBuild Projects="server\api_desbravador.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="api_desbravador:Make">
+        <MSBuild Projects="server\api_desbravador.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Desbravador_Client;api_desbravador"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Desbravador_Client:Clean;api_desbravador:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Desbravador_Client:Make;api_desbravador:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
