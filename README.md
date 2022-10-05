@@ -26,6 +26,8 @@
   1. Fazer a instalação das dependências utilizando o BOSS
   2. Rodar o Projeto api_desbravador 
   3. Rodar o Projeto Desbravador_Client
+### Observação
+  - As DLL´s Adicionadas na pasta, é para utilização dos componentes Indy, caso a aplicação venha a dar erro de SSL, Renomei essas DLL´s para que a aplicação utilize as DLL´s das pastas do Windows.
 > Projeto em desenvolvimento :warning: 
  
 
