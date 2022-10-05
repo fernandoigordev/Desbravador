@@ -29,7 +29,6 @@ object frmPersonRegister: TfrmPersonRegister
     ParentBackground = False
     ShowCaption = False
     TabOrder = 0
-    ExplicitWidth = 621
     object Label1: TLabel
       AlignWithMargins = True
       Left = 20
@@ -62,8 +61,6 @@ object frmPersonRegister: TfrmPersonRegister
     ParentBackground = False
     ShowCaption = False
     TabOrder = 1
-    ExplicitTop = 288
-    ExplicitWidth = 621
     DesignSize = (
       478
       46)
@@ -136,10 +133,6 @@ object frmPersonRegister: TfrmPersonRegister
     Color = clWhite
     ParentBackground = False
     TabOrder = 2
-    ExplicitLeft = 104
-    ExplicitTop = 168
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Label2: TLabel
       Left = 8
       Top = 21

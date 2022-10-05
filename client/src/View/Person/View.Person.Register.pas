@@ -77,7 +77,7 @@ begin
         toCreate: FControllerPerson.CreatePerson;
         toUpdate: FControllerPerson.UpdatePerson;
       end;
-      MessageDlg('Salvo com sucesso!', mtError,[mbOK], 0);
+      MessageDlg('Salvo com sucesso!', mtInformation,[mbOK], 0);
     Except
       on E: Exception do
       begin
@@ -139,7 +139,7 @@ begin
   begin
     Result := False;
     MessageDlg('Campo Cep é obrigatório', mtWarning,[mbOK], 0);
-    edDocument.SetFocus;
+    edCep.SetFocus;
   end
   else if Result and (edFirstName.Text = EmptyStr) then
   begin

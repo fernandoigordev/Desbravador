@@ -72,7 +72,7 @@ begin
     begin
       try
         FControllerPerson.DeletePerson;
-        MessageDlg('Deletado com sucesso!', mtError,[mbOK], 0);
+        MessageDlg('Deletado com sucesso!', mtInformation,[mbOK], 0);
         FControllerPerson.ReadPeople;
       Except
         on E: Exception do
